@@ -1,0 +1,14 @@
+working with variable in the recursion
+variables
+1. Argument
+2. return type
+3. body of function
+
+take the example of binary search
+
+1. comparing take 0(1)
+2. providing the 2 half (n/2) so it take O(N)
+
+so the recurance relation of the binary search is
+F(N) = O(1) + 2 * F(N/2)
+
