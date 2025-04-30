@@ -7,8 +7,6 @@ public class nknights {
         nknight(board, 0, 0 , 4);
         return;
     }
-
-    m
     static void nknight(boolean [][] board, int row, int col, int knights){
         // first check the knights are all placed.
         if(knights == 0){
