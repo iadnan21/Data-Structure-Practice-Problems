@@ -52,7 +52,7 @@ public class nknights {
        }
        return true;
    }
-    // in isValid, check the boundation of the knights.
+    // in isValid, check the boundary condition of the board.
    public static boolean isValid(boolean[][] board, int row, int col){
        if(row >= 0 && row < board.length-1 && col >= 0 && col < board.length){
            return true;
