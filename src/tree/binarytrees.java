@@ -49,12 +49,46 @@ class binarytrees {
         System.out.println(space + node.value);
         displayBT(node.right, space + "\t");
         displayBT(node.left, space + "\t");
-
     }
+    public void prettierdisplayBT(){
+        prettierdisplayBT(this.root, 0);
+    }
+    public void prettierdisplayBT(Node node, int space) {
+        if (node == null) {
+            return;
+        }
+        prettierdisplayBT(node.right, space + 1);
+        if (space != 0) {
+            for (int i = 0; i < space - 1; i++) {
+                System.out.print("|\t\t");
+            }
+            System.out.println("|------->" + node.value);
+        } else {
+            System.out.println(node.value);
+        }
+            prettierdisplayBT(node.left, space+1);
+        }
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         binarytrees bt = new binarytrees();
         bt.insertinBT(scn);
-        bt.displayBT();
+//        bt.displayBT();
+        bt.prettierdisplayBT();
+        /*
+        |		|		|------->80
+|		|------->70
+|		|		|------->65
+|------->60
+|		|------->55
+50
+|		|------->45
+|------->40
+|		|		|------->35
+|		|------->30
+|		|		|		|------->25
+|		|		|------->20
+|		|		|		|		|------->15
+|		|		|		|------->10
+        */
     }
 }
