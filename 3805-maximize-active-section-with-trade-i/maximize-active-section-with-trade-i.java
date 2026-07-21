@@ -9,7 +9,7 @@ class Solution {
 
         while (currentIndex < length) {
             // System.out.println("1");
-            int currentSegmentEnd = currentIndex + 1;
+            int currentSegmentEnd = currentIndex;
             while (currentSegmentEnd < length && s.charAt(currentSegmentEnd) == s.charAt(currentIndex)) {
                 // System.out.println("2");
                 currentSegmentEnd++;
