@@ -4,7 +4,7 @@ class Solution {
 
         if (length <= 2) return length;
 
-        int bitMask = 1;
+        int bitMask = 0;
         for (int num : nums) {
             bitMask |= num;
         }
