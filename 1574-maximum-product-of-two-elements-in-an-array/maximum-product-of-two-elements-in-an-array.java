@@ -1,14 +1,16 @@
 class Solution {
     public int maxProduct(int[] nums) {
-        int total = 0;
-        PriorityQueue<Integer> pqMax = new PriorityQueue<>(Collections.reverseOrder());
-        for (int num : nums) {
-            pqMax.offer(num);
-        }
-        int a = pqMax.poll() - 1;
-        int b = pqMax.poll() - 1;
+        int max1 = 0;
+        int max2 = 0;
 
-        total = a * b;
-        return total;
+        for (int num : nums) {
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2) {
+                max2 = num;
+            }
+        }
+        return (max1 - 1) * (max2 - 1);
     }
 }
